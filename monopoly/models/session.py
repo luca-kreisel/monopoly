@@ -32,7 +32,7 @@ class Session:
             email=conf["email"]
         )
 
-        user.is_active = False
+        user.is_active = True
         user.save()
 
         # Generate a one-time use token and an email message body
@@ -45,9 +45,6 @@ class Session:
         """.format(host=request.get_host(),
                 path=reverse('confirm', args=(user.username, token)))
 
-        send_mail(subject="Verify your email address",
-                message= email_body,
-                from_email="ztong@andrew.cmu.edu",
-                recipient_list=[user.email])
+        #send_mail(subject="Verify your email address",message= email_body,from_email="noreply.mymonopoly",recipient_list=[user.email])
 
         return True, None
