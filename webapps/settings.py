@@ -31,7 +31,7 @@ DEBUG = True
 #                  'ec2-18-188-96-54.us-east-2.compute.amazonaws.com',
 #                  '18.188.96.54']
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['104.248.134.238']
 
 # Application definition
 
